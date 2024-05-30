@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px;
+            /* font-size: 16px; */
+            cursor: pointer;
+        }
+
+        #result {
+            margin: auto;
+            padding: auto;
+            /* font-size: 18px; */
+        }
+
+    </style>
+</head>
+<body>
+    <button id="lotteryButton">Click to Play The Lottery</button>
+    <p id="result"></p>
+    <audio id="loseSound" preload="auto">
+        <source src="/Assets/Audio/LoseSound.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    <audio id="winSound" preload="auto">
+        <source src="/Assets/Audio/WinSound.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        let totalClicks = 0;
+        let wins = 0;
+
+        const lotteryButton = document.getElementById('lotteryButton');
+        const resultDisplay = document.getElementById('result');
+
+        lotteryButton.addEventListener('click', playLottery);
+
+        function playLottery() {
+            totalClicks++;
+
+            // Approximately 1 in 500 chance of winning
+            const isWinner = Math.floor(Math.random() * 500) === 0;
+
+            if (isWinner) {
+                wins++;
+                const winSound = document.getElementById('winSound');
+                winSound.currentTime = 0;
+                    winSound.play();
+                resultDisplay.textContent = `Congratulations! You won! Total clicks: ${totalClicks}, Wins: ${wins}`;
+            } else {
+                const loseSound = document.getElementById('loseSound');
+                loseSound.currentTime = 0;
+                    loseSound.play();
+                resultDisplay.textContent = `Sorry, you didn't win. Total clicks: ${totalClicks}, Wins: ${wins}`;
+            }
+        }
+    </script>
+</body>
+</html>
