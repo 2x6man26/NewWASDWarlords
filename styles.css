@@ -195,3 +195,15 @@ li{
     background-color: turquoise;
     border: 5px dashed darkgrey;
 }
+
+#fullscreenButton{
+    position: absolute;
+    top: 40vh;
+    left: 7vh;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: turquoise;
+    border: 5px dashed darkgrey;
+}
