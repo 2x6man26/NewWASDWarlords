@@ -1,81 +1,74 @@
-*{
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+/* Base styles */
+body {
     background-color: #E4E2DD;
 }
 
-header{
+header {
     text-align: center;
     background-color: lightskyblue;
-    border: 5px;
-    border-style: groove;
+    border: 5px groove;
     margin: 10px;
     text-shadow: 2px 2px grey;
     box-shadow: 4px 4px 10px #444;
-    
 }
 
-nav{
+nav {
     text-align: center;
     font-size: 1.25rem;
-    text-decoration: none;
     background-color: #fff;
-    
 }
 
-footer{
+footer {
     border: 2px solid black;
     text-align: center;
-    box-shadow: 3px -3px 5px 5px lightskyblue ;
-    bottom: 0px;
+    box-shadow: 3px -3px 5px 5px lightskyblue;
     width: 100vw;
-    
 }
 
-img{
+img {
     width: auto;
     margin: auto;
 }
 
-div{
+div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    
 }
 
-ul{
+ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    border: 5px solid darkgray ;
-    
+    border: 5px solid darkgray;
 }
 
-li{
+li {
     border: 5px outset darkgrey;
     padding: 5px;
     margin: 5px;
 }
 
-.teamDisplay{
+.teamDisplay {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     border: 5px outset darkgrey;
-    /* align-items: baseline; */
     align-content: space-around;
     padding: 10px;
     margin: 10px;
     text-align: center;
 }
 
-.mission-words-display{
+.mission-words-display {
     display: flex;
     width: 30vw;
     margin: auto;
@@ -83,59 +76,44 @@ li{
     align-items: center;
     background-color: turquoise;
     border: 5px dashed darkgrey;
-    
 }
 
-.small-paragraph{
+.small-paragraph {
     padding: 10px;
     margin: 10px;
     width: 60vw;
     text-align: center;
     background-color: lightskyblue;
     border: 5px double darkgrey;
-    
 }
 
-.medium-paragraph{
+.medium-paragraph {
     padding: 10px;
     margin: 10px;
     width: 65vw;
     text-align: center;
-    text-wrap: nowrap;
     background-color: lightskyblue;
     border: 5px double darkgrey;
-    
 }
 
-.Lottery-And-Logo{
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
+.Lottery-And-Logo {
     position: relative;
     text-align: center;
 }
 
-/* .Website-Logo{
-    width: 65vw;
-    height: 65vh;
-    margin: auto;
-    padding: auto;
-    text-align: center;
-} */
-
-.Website-Logo img{
+.Website-Logo img {
     display: inline-block;
 }
 
-.teamDisplay img{
-    width: 250;
+.teamDisplay img {
+    width: 250px;
 }
 
-.centered-paragraph{
+.centered-paragraph {
     text-align: center;
 }
 
-.flex-div{
+.flex-div {
     display: flex;
     flex-direction: column;
     border: 5px outset darkgrey;
@@ -143,29 +121,28 @@ li{
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    margin: 20px auto 20px auto;
+    margin: 20px auto;
 }
 
-.flex-div img{
+.flex-div img {
     border: 4px solid darkgray;
 }
 
-.audio-player{
+.audio-player {
     width: 20vw;
     background-color: lightskyblue;
     border: 5px double darkgrey;
     border-radius: 5px;
 }
 
-.blaine{
-    /* object-fit: contain; */
+.blaine {
     width: 100vw;
     height: 100vh;
     border: 5px double darkgrey;
-    padding: 10px; 
+    padding: 10px;
 }
 
-.audio-player p{
+.audio-player p {
     width: 20vw;
 }
 
@@ -174,9 +151,7 @@ li{
     margin: 20px;
 }
 
-#lotteryFrame{
-    /* margin: 10px;
-    padding: 5px; */
+#lotteryFrame {
     background-color: turquoise;
     border: 5px dashed darkgrey;
     position: absolute;
@@ -184,7 +159,7 @@ li{
     left: 20px;
 }
 
-#scoreCounter{
+#scoreCounter {
     position: absolute;
     top: 30vh;
     left: 7vh;
@@ -196,7 +171,7 @@ li{
     border: 5px dashed darkgrey;
 }
 
-#fullscreenButton{
+#fullscreenButton {
     position: absolute;
     top: 40vh;
     left: 7vh;
@@ -207,3 +182,59 @@ li{
     background-color: turquoise;
     border: 5px dashed darkgrey;
 }
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .teamDisplay {
+        flex-direction: column;
+    }
+
+    .mission-words-display {
+        width: 50vw;
+    }
+
+    .small-paragraph {
+        width: 80vw;
+        font-size: 0.9em;
+    }
+
+    .medium-paragraph {
+        width: 85vw;
+        font-size: 0.9em;
+    }
+
+    .flex-div {
+        width: 85vw;
+    }
+
+    .audio-player, .audio-player p {
+        width: 40vw;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    header {
+        margin: 5px;
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .teamDisplay {
+        flex-direction: column;
+    }
+
+    .mission-words-display {
+        width: 80v
