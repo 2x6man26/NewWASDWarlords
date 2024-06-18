@@ -183,3 +183,15 @@ li{
     top: 20px;
     left: 20px;
 }
+
+#scoreCounter{
+    position: absolute;
+    top: 30vh;
+    left: 7vh;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: turquoise;
+    border: 5px dashed darkgrey;
+}

@@ -10,6 +10,10 @@
         <header>
             <h1> Fun Game With Cutting-Edge Graphics</h1>
         </header>
+        <audio id="coinSound" preload="auto">
+            <source src="Assets/Audio/CoinSound.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,9 +25,11 @@
             </ul>
         </nav>
         <hr>
+        <p id="scoreCounter">Click the ball!</p>
         <div>
             <canvas id="gameCanvas" width="400" height="300"></canvas>
         </div>
+        
         <script src="game.js"></script>
         <footer>
             <div>&copy; 2024 Wasdwarlords.com</div>

@@ -32,7 +32,11 @@ function handleClick(event) {
         // Clicked on the ball
         score++;
         document.title = `Score: ${score}`;
+        document.getElementById("scoreCounter").innerHTML = `Score: ${score}`;
         ballPosition = randomPosition();
         drawBall(ballPosition.x, ballPosition.y);
+        const coinSound = document.getElementById('coinSound');
+                coinSound.currentTime = 0;
+                    coinSound.play();
     }
 }
