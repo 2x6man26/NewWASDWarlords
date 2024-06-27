@@ -96,11 +96,6 @@ li {
     border: 5px double darkgrey;
 }
 
-.Lottery-And-Logo {
-    position: relative;
-    text-align: center;
-}
-
 .Website-Logo img {
     display: inline-block;
 }
@@ -307,9 +302,19 @@ li {
 
 /* Media query for mobile devices */
 @media (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
     header {
-        margin: 5px;
+        margin: 3vh 5vw 3vh 5vw; 
         font-size: 1.5rem;
+    }
+
+    nav{
+        width: 70vw;
+        margin: auto;
     }
 
     nav ul {
@@ -326,6 +331,12 @@ li {
     }
 
     .mission-words-display {
-        width: 80vh;
+        width: 50vw;
+    }
+    #lotteryFrame {
+        background-color: turquoise;
+        border: 5px dashed darkgrey;
+        height: 15vh;
+        width: 40vw;
     }
 }
