@@ -13,7 +13,7 @@ header {
     text-align: center;
     background-color: lightskyblue;
     border: 5px groove;
-    margin: 10px;
+    margin: 2.5vh auto;
     text-shadow: 2px 2px grey;
     box-shadow: 4px 4px 10px #444;
 }
@@ -54,7 +54,7 @@ ul {
 li {
     border: 5px outset darkgrey;
     padding: 5px;
-    margin: 5px;
+    margin: 2.5vh auto;
 }
 
 .teamDisplay {
@@ -80,7 +80,7 @@ li {
 
 .small-paragraph {
     padding: 10px;
-    margin: 10px;
+    margin: 2.5vh auto;
     width: 60vw;
     text-align: center;
     background-color: lightskyblue;
@@ -89,7 +89,7 @@ li {
 
 .medium-paragraph {
     padding: 10px;
-    margin: 10px;
+    margin: 2.5vh auto;
     width: 65vw;
     text-align: center;
     background-color: lightskyblue;
@@ -102,6 +102,50 @@ li {
 
 .teamDisplay img {
     width: 250px;
+}
+
+.important-note{
+    padding: 10px;
+    margin: 2.5vh auto;
+    width: 60vw;
+    text-align: center;
+    background-color: red;
+    border: 5px dashed black;
+}
+
+.about{
+    padding: 10px;
+    margin: 2.5vh auto;
+    width: 60vw;
+    text-align: center;
+    font-size: 1.25rem;
+    background-color: lightskyblue;
+    border: 5px dashed darkgray;
+}
+
+.contact{
+    padding: 10px;
+    margin: 2.5vh auto;
+    width: 60vw;
+    text-align: center;
+    background-color: lightskyblue;
+    border: 5px double darkgrey; 
+}
+
+.email{
+    padding: 10px;
+    margin: 2.5vh auto;
+    width: 20vw;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    background-color: red;
+    border: 5px dashed black;
+}
+
+.email a{
+    color:inherit;
+    text-decoration: none;
 }
 
 .centered-paragraph {
