@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listeners
     canvas.addEventListener('click', handleClick);
-    fullscreenButton.addEventListener('click', toggleFullscreen);
     upButton.addEventListener('click', () => konamiCodeEntered ? moveBall('up') : handleKonamiCode({ code: 'ArrowUp' }));
     downButton.addEventListener('click', () => konamiCodeEntered ? moveBall('down') : handleKonamiCode({ code: 'ArrowDown' }));
     leftButton.addEventListener('click', () => konamiCodeEntered ? moveBall('left') : handleKonamiCode({ code: 'ArrowLeft' }));
