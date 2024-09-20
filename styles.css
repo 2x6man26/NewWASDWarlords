@@ -85,12 +85,22 @@ li:hover {
     width: 20vw;
 }
 
-.lottery-and-logo{
-    display: block;
-}
-.lottery-and-logo img{
-    align-items: center;
+.Logo{
     width: 50%;
+}
+
+.lottery-and-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Spoon{
+    border: 30px solid transparent; /* Adjust this to match the border image's intended thickness */
+    border-image: url(Assets/Images/frame.jpeg) 1 round; /* 30 is the slice value, adjust it as needed */
+    width: 100%; /* Ensures the image scales responsively */
+    height: auto; /* Maintains the aspect ratio */
+    display: block;
 }
 
 .mission-words-display {
@@ -137,7 +147,7 @@ li:hover {
     max-width: 300px;
     text-align: center;
     background-color: #A7F3D0;
-    color: white;
+    /* color: white; */
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -145,6 +155,7 @@ li:hover {
 
 .email:hover {
     background-color: #c00;
+    color: white;
 }
 
 .flex-div {
@@ -231,7 +242,6 @@ li:hover {
 #playRandomAudio p button {
     font-size: 2rem;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
-
 }
 
 #scoreCounter{
