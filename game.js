@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const canvas = document.getElementById('gameCanvas');
     const ctx = canvas.getContext('2d');
-    const fullscreenButton = document.getElementById('fullscreenButton');
     const scoreCounter = document.getElementById('scoreCounter');
     const coinSound = document.getElementById('coinSound');
     const zeldaSound = document.getElementById('zeldaSound');
@@ -14,8 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let score = 0;
     let ballPosition = randomPosition();
-    let originalWidth = canvas.width;
-    let originalHeight = canvas.height;
     let konamiCodeEntered = false;
 
     const konamiCode = [
@@ -35,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function randomPosition() {
-        const x = Math.random() * (canvas.width - 40) + 20;
-        const y = Math.random() * (canvas.height - 40) + 20;
+        const radius = 20;
+        const x = Math.random() * (canvas.width - 2 * radius) + radius;
+        const y = Math.random() * (canvas.height - 2 * radius) + radius;
         return { x, y };
     }
 
@@ -59,28 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function toggleFullscreen() {
-        if (document.fullscreenElement) {
-            document.exitFullscreen();
-        } else {
-            originalWidth = canvas.width;
-            originalHeight = canvas.height;
-            
-            canvas.requestFullscreen().then(() => {
-                resizeCanvas(true);
-            });
-        }
-    }
+    function moveBall(direction) {
+        if (!konamiCodeEntered) return;
 
-    function resizeCanvas(fullscreen) {
-        if (fullscreen) {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        } else {
-            canvas.width = originalWidth;
-            canvas.height = originalHeight;
-        }
-        
+        const step = 10;
+        if (direction === 'up') ballPosition.y -= step;
+        if (direction === 'down') ballPosition.y += step;
+        if (direction === 'left') ballPosition.x -= step;
+        if (direction === 'right') ballPosition.x += step;
+
         ballPosition = keepBallWithinBounds(ballPosition.x, ballPosition.y);
         drawBall(ballPosition.x, ballPosition.y);
     }
@@ -94,56 +79,26 @@ document.addEventListener('DOMContentLoaded', () => {
         return { x, y };
     }
 
-    function moveBall(direction) {
-        if (!konamiCodeEntered) return;
-
-        const step = 10;
-        switch (direction) {
-            case 'up':
-                ballPosition.y -= step;
-                break;
-            case 'down':
-                ballPosition.y += step;
-                break;
-            case 'left':
-                ballPosition.x -= step;
-                break;
-            case 'right':
-                ballPosition.x += step;
-                break;
-            case 'a':
-                // Define action for A button here
-                break;
-            case 'b':
-                // Define action for B button here
-                break;
-        }
-        ballPosition = keepBallWithinBounds(ballPosition.x, ballPosition.y);
-        drawBall(ballPosition.x, ballPosition.y);
-    }
-
     function handleKonamiCode(event) {
         if (event.code === konamiCode[konamiCodeIndex]) {
             konamiCodeIndex++;
             if (konamiCodeIndex === konamiCode.length) {
                 konamiCodeEntered = true;
-                konamiCodeIndex = 0; // Reset for future use
+                konamiCodeIndex = 0;
                 zeldaSound.currentTime = 0;
                 zeldaSound.play();
             }
         } else {
-            konamiCodeIndex = 0; // Reset if the sequence is broken
+            konamiCodeIndex = 0;
         }
     }
 
     // Event listeners
     canvas.addEventListener('click', handleClick);
-    upButton.addEventListener('click', () => konamiCodeEntered ? moveBall('up') : handleKonamiCode({ code: 'ArrowUp' }));
-    downButton.addEventListener('click', () => konamiCodeEntered ? moveBall('down') : handleKonamiCode({ code: 'ArrowDown' }));
-    leftButton.addEventListener('click', () => konamiCodeEntered ? moveBall('left') : handleKonamiCode({ code: 'ArrowLeft' }));
-    rightButton.addEventListener('click', () => konamiCodeEntered ? moveBall('right') : handleKonamiCode({ code: 'ArrowRight' }));
-    aButton.addEventListener('click', () => konamiCodeEntered ? moveBall('a') : handleKonamiCode({ code: 'KeyA' }));
-    bButton.addEventListener('click', () => konamiCodeEntered ? moveBall('b') : handleKonamiCode({ code: 'KeyB' }));
+    upButton.addEventListener('click', () => moveBall('up'));
+    downButton.addEventListener('click', () => moveBall('down'));
+    leftButton.addEventListener('click', () => moveBall('left'));
+    rightButton.addEventListener('click', () => moveBall('right'));
     document.addEventListener('keydown', handleKonamiCode);
 
     // Initialize the game

@@ -250,10 +250,23 @@ li:hover {
     align-items: center;
 }
 
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;  /* 90% of the viewport width */
+    height: 90vh; /* 90% of the viewport height */
+    max-width: 1000px; /* Limit the max width for larger screens */
+    max-height: 700px; /* Limit the max height */
+    background-color: #fff; /* Optional background */
+    border: 2px solid #ccc; /* Optional border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
 #gameCanvas {
-    border: 2px solid #000;
-    margin: 20px;
-    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 #lotteryFrame, #scoreCounter, #fullscreenButton {
