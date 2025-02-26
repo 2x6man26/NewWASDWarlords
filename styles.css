@@ -89,6 +89,35 @@ li:hover {
     width: 50%;
 }
 
+.albums{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    
+    margin: 30px;
+}
+
+.album{
+    background-color: #dfc5fe;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 30%;
+    font-family: Arial, sans-serif;
+}
+
+.albums .album img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.albums .album p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
 .lottery-and-logo{
     display: flex;
     flex-direction: row;
@@ -157,6 +186,7 @@ li:hover {
     background-color: #c00;
     color: white;
 }
+
 
 .flex-div {
     display: flex;
@@ -283,9 +313,9 @@ li:hover {
         flex-direction: column;
         width: 100%;
     }
-    .teamDisplay img{
+    /* .teamDisplay img{
         width: 80%;
-    }
+    } */
 
     .mission-words-display {
         font-size: 1.5rem;
