@@ -30,6 +30,12 @@ nav {
     border-radius: 8px;
     margin-bottom: 3vh;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Arrange items in a row */
+    justify-content: space-around; /* Distribute space evenly between items */
+    align-items: center; /* Vertically center the items */
+    width: 100%; /* Ensure it takes up the full width of the viewport */
+    padding: 1rem; /* Optional padding around the nav */
+    box-sizing: border-box; /* Include padding in width/height calculations */
 }
 
 footer {
@@ -284,6 +290,31 @@ li:hover {
     background-color: #b00;
 }
 
+.clickable-text {
+    text-decoration: underline; 
+    cursor: pointer; 
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 20px;
+    margin: 3vh auto;
+    max-width: 600px;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #dfc5fe;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hidden-paragraph {
+    display: none; 
+    padding: 0 10px; 
+    color: #333; 
+  }
+  
+  .hidden-paragraph.expanded {
+    display: block; 
+  }
+  
 
 #playRandomAudio p button {
     font-size: 2rem;
