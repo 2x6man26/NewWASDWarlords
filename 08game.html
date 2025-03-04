@@ -10,14 +10,6 @@
     <header>
         <h1> Fun Game With Cutting-Edge Graphics</h1>
     </header>
-    <audio id="coinSound" preload="auto">
-        <source src="Assets/Audio/CoinSound.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-    </audio>
-    <audio id="zeldaSound" preload="auto">
-        <source src="Assets/Audio/ZeldaSound.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
-    </audio>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -27,29 +19,14 @@
             <li><a href="05UwUsongs.html">Songs With UwU</a></li>
             <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
             <li><a href="07albums.html">Levi's Favorite Albums</a></li>
-            <!-- <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li> -->
+            <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
             <!-- <li><a href="09dontgohere.html">Don't Go Here</a></li> -->
         </ul>
     </nav>
-    <p id="scoreCounter">Click the ball!</p>
-    <div id="canvas-container">
-        <canvas id="gameCanvas"></canvas>
+    <div class="score">Score: <span id="score">0</span></div>
+    <div class="game-container">
+        <div class="ball" id="ball"></div>
     </div>
-    <!-- <div class="control-buttons">
-        <div class="arrow-buttons">
-            <button id="upButton">Up</button>
-            <div class="horizontal-buttons">
-                <button id="leftButton">Left</button>
-                <button id="rightButton">Right</button>
-            </div>
-            <button id="downButton">Down</button>
-        </div>
-        <div class="action-buttons">
-            <button id="aButton">A</button>
-            <button id="bButton">B</button>
-        </div>
-    </div> -->
-    
     <script src="game.js"></script>
     <footer>
         <div>&copy; 2024 Wasdwarlords.com</div>
