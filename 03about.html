@@ -3,61 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>WASD Warlords | About Us</title>
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
+
     <header>
         <h1>About Us</h1>
     </header>
-    <nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="nav-toggle" aria-label="open navigation">☰</button>
+<nav class="nav-closed">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="02products.html">Products</a></li>
             <li><a href="03about.html">About</a></li>
-            <li><a href="04contact.html">Contact</a></li>
-            <li><a href="05UwUsongs.html">Songs With UwU</a></li>
+            <!-- <li><a href="04contact.html">Contact</a></li>
+            <li><a href="05UwUsongs.html">Songs With UwU</a></li> -->
             <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
             <li><a href="07albums.html">Levi's Favorite Albums</a></li>
             <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
-            <!-- <li><a href="09dontgohere.html">Don't Go Here</a></li> -->
-            <li><a href="10poetry.html">Poetry</a></li>
+         <!--   <li><a href="09dontgohere.html">Don't Go Here</a></li>
+            <li><a href="10poetry.html">Poetry</a></li> -->
+            <li><a href="11photography.html">Photography</a></li>
         </ul>
     </nav>
-    <main>
-        <section>
-            <div>
-                <h2>Our Project, Our Dream</h2>
-                <div class="about">
-                    I am Levi Donaldson, the developer of this project. I was born and raised in Texas.
-                    My home address is on Earth. I was born at a very young age.
-                    Our team is Gigachad (Marketing Specialist),
-                    The Intruder (Door to Door Salesman),
-                    William Afton (Childcare Attendant),
-                    and Levi (Head Idiot/Goofball in training). 
-                    We all help where needed.
+
+    <main class="content">
+
+        <section class="about-section fade-in">
+            <h2>Our Project, Our Dream</h2>
+            <div class="about">
+                <p class="small-paragraph">
+                I am Levi Donaldson, the developer of this project. I was born and raised in Texas.
+                My home address is on Earth. I was born at a very young age.
+                Our team is Gigachad (Marketing Specialist),
+                The Intruder (Door to Door Salesman),
+                William Afton (Childcare Attendant),
+                and Levi (Head Idiot / Certified Goofball). 
+                We all help where needed.
+            </p>
+            </div>
+        </section>
+
+        <section class="team-section fade-in">
+            <h2>Our Team</h2>
+            <div class="team-display">
+                <div class="team-member slide-left">
+                    <img src="Assets/Images/Gigachad.jpeg" alt="Gigachad - Marketing Specialist">
+                    <h3>Gigachad</h3>
+                    <p>Marketing Specialist</p>
+                </div>
+                <div class="team-member slide-right">
+                    <img src="Assets/Images/TheIntruder.jpeg" alt="The Intruder - Door to Door Salesman">
+                    <h3>The Intruder</h3>
+                    <p>Door to Door Salesman</p>
+                </div>
+                <div class="team-member slide-left">
+                    <img src="Assets/Images/Squimpus.jpeg" alt="William Afton - Childcare Attendant">
+                    <h3>William Afton</h3>
+                    <p>Childcare Attendant</p>
+                </div>
+                <div class="team-member slide-right">
+                    <img src="Assets/Images/NewLeviAgain.png" alt="Levi - Head Idiot/Goofball in training">
+                    <h3>Levi</h3>
+                    <p>Head Idiot /  Certified Goofball</p>
                 </div>
             </div>
         </section>
-        <div class="teamDisplay">
-            <h2>Our Team</h2>
-            <img src="Assets/Images/Gigachad.jpeg" alt="Definitely not me" width="250" height="250">
-            <img src="Assets/Images/TheIntruder.jpeg" alt="Maybe me" width="250" height="250">
-            <img src="Assets/Images/Squimpus.jpeg" alt="Probably not me" width="250" height="250">
-            <img src="Assets/Images/NewLevi.jpeg" alt="Probably me" width="50" height="250">
-        </div>
-        <section>
-            <div>
-                <p class="small-paragraph">
-                    Our team is a group of committed individuals who may or may not have been sourced from the street
-                    and or a modeling agency. In fact, this website would not exist if I couldn't use Chat GPT and slave labo-
-                    I mean helpful friends. This website is primarily for my fun and education.
-                </p>
-            </div>
+
+        <section class="fade-in">
+            <p class="small-paragraph">
+                Our team is a group of committed individuals who may or may not have been sourced from the street
+                and/or a modeling agency. In fact, this website would not exist if I couldn't use Chat GPT and helpful friends.
+                This website is primarily for fun and education.
+            </p>
         </section>
+
     </main>
+
     <footer>
-        <div>&copy; 2024 Wasdwarlords.com</div>
+        <div>&copy; 2025 Wasdwarlords.com</div>
     </footer>
+
+    <script src="script1.js"></script>
 </body>
 </html>

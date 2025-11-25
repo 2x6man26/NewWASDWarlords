@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASD Warlords | Photography</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <header>
+        <h1>Photography by Levi</h1>
+    </header>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="nav-toggle" aria-label="open navigation">☰</button>
+
+    <nav class="nav-closed">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="02products.html">Products</a></li>
+            <li><a href="03about.html">About</a></li>
+            <!-- <li><a href="04contact.html">Contact</a></li>
+            <li><a href="05UwUsongs.html">Songs With UwU</a></li> -->
+            <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
+            <li><a href="07albums.html">Levi's Favorite Albums</a></li>
+            <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
+         <!--   <li><a href="09dontgohere.html">Don't Go Here</a></li>
+            <li><a href="10poetry.html">Poetry</a></li> -->
+            <li><a href="11photography.html">Photography</a></li>
+        </ul>
+    </nav>
+
+    <main class="content fade-in">
+        <p class="medium-paragraph">
+            Welcome to my photography collection! I am in love with the magic of film photograpghy.
+            There's something about it that no digital camera or mere filter will ever be able to replicate.
+            There's something romantic about the exact light that was present when the photo was taken is now present in the physical film itself.
+            Please get in contact if you'd like to book my services.
+            Use the arrows to browse, and click any photo to enlarge it.
+        </p>
+
+        <div class="carousel-container">
+            <button class="carousel-btn left-btn">&#10094;</button>
+            <div class="carousel-track">
+                <!-- <div class="carousel-item">
+                    <img src="Assets/Photography/photo1.jpg" alt="Photo 1" onclick="openLightbox(this)">
+                
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Photography/photo2.jpg" alt="Photo 2" onclick="openLightbox(this)">
+         
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Photography/photo3.jpg" alt="Photo 3" onclick="openLightbox(this)">
+                    
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Photography/photo4.jpg" alt="Photo 4" onclick="openLightbox(this)">
+                
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/Photography/photo5.jpg" alt="Photo 5" onclick="openLightbox(this)">
+            
+                </div> -->
+                <!-- Add more photos here -->
+            </div>
+            <button class="carousel-btn right-btn">&#10095;</button>
+        </div>
+
+        <!-- Lightbox overlay -->
+        <div id="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" src="" alt="Enlarged photo">
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Wasdwarlords.com</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>

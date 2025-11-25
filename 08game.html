@@ -4,33 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click the Ball Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
+
     <header>
-        <h1> Fun Game With Cutting-Edge Graphics</h1>
+        <h1>Fun Game With Cutting-Edge Graphics</h1>
     </header>
-    <nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="nav-toggle" aria-label="open navigation">☰</button>
+
+    <nav class="nav-closed">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="02products.html">Products</a></li>
             <li><a href="03about.html">About</a></li>
-            <li><a href="04contact.html">Contact</a></li>
-            <li><a href="05UwUsongs.html">Songs With UwU</a></li>
+            <!-- <li><a href="04contact.html">Contact</a></li>
+            <li><a href="05UwUsongs.html">Songs With UwU</a></li> -->
             <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
             <li><a href="07albums.html">Levi's Favorite Albums</a></li>
             <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
-            <!-- <li><a href="09dontgohere.html">Don't Go Here</a></li> -->
-            <li><a href="10poetry.html">Poetry</a></li>
+         <!--   <li><a href="09dontgohere.html">Don't Go Here</a></li>
+            <li><a href="10poetry.html">Poetry</a></li> -->
+            <li><a href="11photography.html">Photography</a></li>
         </ul>
     </nav>
-    <div class="score">Score: <span id="score">0</span></div>
-    <div class="game-container">
-        <div class="ball" id="ball"></div>
-    </div>
-    <script src="game.js"></script>
+
+    <main class="content">
+        <div class="score">Score: <span id="score">0</span></div>
+
+        <div class="game-container">
+            <div class="ball" id="ball"></div>
+        </div>
+    </main>
+
     <footer>
-        <div>&copy; 2024 Wasdwarlords.com</div>
+        <div>&copy; 2025 Wasdwarlords.com</div>
     </footer>
+
+    <script src="game.js"></script>
 </body>
 </html>

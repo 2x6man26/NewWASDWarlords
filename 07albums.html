@@ -3,145 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Levi's Favorite Albums</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>WASD Warlords | Levi's Favorite Albums</title>
+    <link rel="stylesheet" href="test.css">
+     <script src="script1.js"></script>
 </head>
 <body>
-    <main>
+
     <header>
         <h1>Levi's Favorite Albums</h1>
     </header>
-    <nav>
+
+    <button class="nav-toggle" aria-label="open navigation">☰</button>
+
+   <nav class="nav-closed">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="02products.html">Products</a></li>
             <li><a href="03about.html">About</a></li>
-            <li><a href="04contact.html">Contact</a></li>
-            <li><a href="05UwUsongs.html">Songs With UwU</a></li>
+            <!-- <li><a href="04contact.html">Contact</a></li>
+            <li><a href="05UwUsongs.html">Songs With UwU</a></li> -->
             <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
             <li><a href="07albums.html">Levi's Favorite Albums</a></li>
             <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
-            <!-- <li><a href="09dontgohere.html">Don't Go Here</a></li> -->
-            <li><a href="10poetry.html">Poetry</a></li>
+         <!--   <li><a href="09dontgohere.html">Don't Go Here</a></li>
+            <li><a href="10poetry.html">Poetry</a></li> -->
+            <li><a href="11photography.html">Photography</a></li>
         </ul>
     </nav>
+
+    <main class="content fade-in">
         <p class="medium-paragraph">
-            I am huge fan of listening to albums and I cannot understand how some people just listen to hits.
-            The storytelling and emotional journey that is found in a well made album is much more enjoyable then a banger track or two.
+            I am a huge fan of albums and cannot understand how some people just listen to hits.
+            The storytelling and emotional journey of a well-made album is far more enjoyable than just a single banger track.
             Below are some of my favorite albums.
         </p>
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0h1DbrbM00m4CtInzwGgcc?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <section class="albums">
-            <p class="album">
-                <a href="https://open.spotify.com/album/0DlPNJ1lhOgcunXTsBboC0?si=16bb82b49b3b4e05">
-                    <img src="/Assets/Images/Albums/DivineDiscontent.jpg">
+
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/0h1DbrbM00m4CtInzwGgcc" allow="autoplay; clipboard-write; encrypted-media" loading="lazy"></iframe>
+
+        <section class="polaroid-layout">
+            <!-- Album 1 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/0DlPNJ1lhOgcunXTsBboC0">
+                    <img src="Assets/Images/Albums/DivineDiscontent.jpg" alt="Divine Discontent">
                 </a>
-                Divine Discontent <br>
-                Sixpence None the Richer
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/2kB1Qqw3YOR9i3nbNxXWRs?si=eXO6GrowTsufLiUk1EueCw">
-                    <img src="/Assets/Images/Albums/QueenOfTheMurderScene.jpeg">
+                <p class="caption">Divine Discontent<br>Sixpence None the Richer</p>
+            </div>
+            <!-- Album 2 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/2kB1Qqw3YOR9i3nbNxXWRs">
+                    <img src="Assets/Images/Albums/QueenOfTheMurderScene.jpeg" alt="Queen Of The Murder Scene">
                 </a>
-                Queen Of The Murder Scene <br>
-                The Warning
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/4sgYpkIASM1jVlNC8Wp9oF?si=4c7b1f965ad342b8">
-                    <img src="/Assets/Images/Albums/Paramore.jpeg">
+                <p class="caption">Queen Of The Murder Scene<br>The Warning</p>
+            </div>
+            <!-- Album 3 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/4sgYpkIASM1jVlNC8Wp9oF">
+                    <img src="Assets/Images/Albums/Paramore.jpeg" alt="Paramore">
                 </a>
-                Paramore <br>
-                Paramore
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/2r2r78NE05YjyHyVbVgqFn?si=42744ee8278c4fa4">
-                    <img src="/Assets/Images/Albums/Vessel.jpg">
+                <p class="caption">Paramore<br>Paramore</p>
+            </div>
+            <!-- Album 4 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/2r2r78NE05YjyHyVbVgqFn">
+                    <img src="Assets/Images/Albums/Vessel.jpg" alt="Vessel">
                 </a>
-                Vessel <br>
-                Twenty One Pilots
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/25paSmOYSF03s81DCNqQn3?si=0nvlYQvcQ0GM8nDhpe99Zg">
-                    <img src="/Assets/Images/Albums/MontgomeryRicky.jpg">
+                <p class="caption">Vessel<br>Twenty One Pilots</p>
+            </div>
+            <!-- Album 5 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/25paSmOYSF03s81DCNqQn3">
+                    <img src="Assets/Images/Albums/MontgomeryRicky.jpg" alt="Montgomery Ricky">
                 </a>
-                Montgomery Ricky <br>
-                Ricky Montgomery
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/1ROa0bSRzWi67kUyzfyfq6?si=LM1wWfb-TE-68JaUBygo_Q">
-                    <img src="/Assets/Images/Albums/TheGreatGatsby.jpg">
+                <p class="caption">Montgomery Ricky<br>Ricky Montgomery</p>
+            </div>
+            <!-- Album 6 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/1ROa0bSRzWi67kUyzfyfq6">
+                    <img src="Assets/Images/Albums/TheGreatGatsby.jpg" alt="The Great Gatsby">
                 </a>
-                The Great Gatsby <br>
-                Original Broadway Cast
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/02w1xMzzdF2OJxTeh1basm?si=b68b045d392e4dee">
-                    <img src="/Assets/Images/Albums/Fallen.jpg">
+                <p class="caption">The Great Gatsby<br>Original Broadway Cast</p>
+            </div>
+            <!-- Album 7 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/02w1xMzzdF2OJxTeh1basm">
+                    <img src="Assets/Images/Albums/Fallen.jpg" alt="Fallen">
                 </a>
-                Fallen <br>
-                Evanescence
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/6EBAeYn2YJvmXp6AkK18Mc?si=12c594d60f4c4bd9">
-                    <img src="/Assets/Images/Albums/HopesandFears.jpg">
+                <p class="caption">Fallen<br>Evanescence</p>
+            </div>
+            <!-- Album 8 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/6EBAeYn2YJvmXp6AkK18Mc">
+                    <img src="Assets/Images/Albums/HopesandFears.jpg" alt="Hopes and Fears">
                 </a>
-                Hopes and Fears <br>
-                Keane
-            </p>
-            <!-- <p class="album">
-                <a href="https://open.spotify.com/album/3j70PDKieTWQAwas3bPHRZ?si=c8c2e0eedae24cb6">
-                    <img src="/Assets/Images/Albums/EyetotheTelescope.jpg">
+                <p class="caption">Hopes and Fears<br>Keane</p>
+            </div>
+            <!-- Album 9 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/7fJJK56U9fHixgO0HQkhtI">
+                    <img src="Assets/Images/Albums/FutureNostalgia.png" alt="Future Nostalgia">
                 </a>
-                Eye to the Telescope <br>
-                KT Tunstall
-            </p> -->
-            <p class="album">
-                <a href="https://open.spotify.com/album/7fJJK56U9fHixgO0HQkhtI?si=JpL-ARnGRMmc40cIrxHQww">
-                    <img src="/Assets/Images/Albums/FutureNostalgia.png">
+                <p class="caption">Future Nostalgia<br>Dua Lipa</p>
+            </div>
+            <!-- Album 10 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/3iPSVi54hsacKKl1xIR2eH">
+                    <img src="Assets/Images/Albums/Shortn'Sweet.png" alt="Short n' Sweet">
                 </a>
-                Future Nostalgia <br>
-                Dua Lipa
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/3iPSVi54hsacKKl1xIR2eH?si=OwCveDOMRz2cRve6Adm9bg">
-                    <img src="/Assets/Images/Albums/Shortn'Sweet.png">
+                <p class="caption">Short n' Sweet<br>Sabrina Carpenter</p>
+            </div>
+            <!-- Album 11 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa">
+                    <img src="Assets/Images/Albums/RandomAccessMemories.jpg.webp" alt="Random Access Memories">
                 </a>
-                Short n' Sweet <br>
-                Sabrina Carpenter
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/4m2880jivSbbyEGAKfITCa?si=P1v3AaiSSWyPOOC0WjObGQ">
-                    <img src="/Assets/Images/Albums/RandomAccessMemories.jpg.webp">
+                <p class="caption">Random Access Memories<br>Daft Punk</p>
+            </div>
+            <!-- Album 12 -->
+            <div class="album">
+                <a href="https://open.spotify.com/album/5AKycvv2TUUh9h0KIletJt">
+                    <img src="Assets/Images/Albums/Duality.jpeg" alt="Duality">
                 </a>
-                Random Access Memories <br>
-                Daft Punk
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/5AKycvv2TUUh9h0KIletJt?si=wihMSPOFQc-tMqVJNAJ1_A">
-                    <img src="/Assets/Images/Albums/Duality.jpeg">
-                </a>
-                Duality <br>
-                Set It off
-            </p>
-            <!-- <p class="album">
-                <a href="https://open.spotify.com/album/4GDchmJ8oESRJ58cDXvnE0?si=56e340acc212485b">
-                    <img src="/Assets/Images/Albums/Cargo.jpg">
-                </a>
-                Cargo <br>
-                Men at Work
-            </p>
-            <p class="album">
-                <a href="https://open.spotify.com/album/71Y6kburF8k1qyHycovHy8?si=m0V6w4iPT6SPYhxLE1Q8VQ">
-                    <img src="/Assets/Images/Albums/EyeInTheSky.jpg">
-                </a>
-                Eye In The Sky <br>
-                The Alan Parsons Project
-            </p> -->
-            
+                <p class="caption">Duality<br>Set It Off</p>
+            </div>
         </section>
     </main>
+
     <footer>
-        <div>&copy; 2024 Wasdwarlords.com</div>
+        <p>&copy; 2025 Wasdwarlords.com</p>
     </footer>
+
+
 </body>
 </html>

@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <h1>Products</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="02products.html">Products</a></li>
-                <li><a href="03about.html">About</a></li>
-                <li><a href="04contact.html">Contact</a></li>
-                <li><a href="05UwUsongs.html">Songs With UwU</a></li>
-                <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
-                <li><a href="07albums.html">Levi's Favorite Albums</a></li>
-                <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
-                <!-- <li><a href="09dontgohere.html">Don't Go Here</a></li> -->
-                <li><a href="10poetry.html">Poetry</a></li>
-            </ul>
-        </nav>
-        <div>
-            <p class="small-paragraph">
-                Trust me, you don't want to buy our junk.
-                <br>
-                But if you do, here's what we got.
-            </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WASD Warlords | Products</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <header>
+        <h1>Products</h1>
+    </header>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="nav-toggle" aria-label="open navigation">☰</button>
+
+    <nav class="nav-closed">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="02products.html">Products</a></li>
+            <li><a href="03about.html">About</a></li>
+            <!-- <li><a href="04contact.html">Contact</a></li>
+            <li><a href="05UwUsongs.html">Songs With UwU</a></li> -->
+            <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
+            <li><a href="07albums.html">Levi's Favorite Albums</a></li>
+            <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
+         <!--   <li><a href="09dontgohere.html">Don't Go Here</a></li>
+            <li><a href="10poetry.html">Poetry</a></li> -->
+            <li><a href="11photography.html">Photography</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <p class="small-paragraph">
+            Trust me, you don't want to buy our junk.
+            <br><br>
+            But if you do... here's what we got.
+        </p>
+    </div>
+
+    <!-- Product Gallery Polaroids -->
+    <div class="polaroid-layout product-gallery">
+        <div class="album">
+            <img src="Assets/Products/IMG_6303.jpg" alt="Product 1">
         </div>
-        <div class="flex-div">
-            <img src="Assets/Products/IMG_6303.jpg">
-            <img src="Assets/Products/IMG_6304.jpg">
-            <img src="Assets/Products/IMG_6305.jpg">
-            <img src="Assets/Products/IMG_6306.jpg">
-            <img src="Assets/Products/IMG_6307.jpeg">
+        <div class="album">
+            <img src="Assets/Products/IMG_6304.jpg" alt="Product 2">
         </div>
-        <footer>
-            <p>
-                &copy;2024 WASDWarlords.com
-            </p>
-        </footer>
-    </body>
+        <div class="album">
+            <img src="Assets/Products/IMG_6305.jpg" alt="Product 3">
+        </div>
+        <div class="album">
+            <img src="Assets/Products/IMG_6306.jpg" alt="Product 4">
+        </div>
+        <div class="album">
+            <img src="Assets/Products/IMG_6307.jpeg" alt="Product 5">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 WASDWarlords.com</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
 </html>
