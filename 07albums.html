@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WASD Warlords | Levi's Favorite Albums</title>
     <link rel="stylesheet" href="test.css">
-     <script src="script1.js"></script>
 </head>
 <body>
 
@@ -13,24 +12,28 @@
         <h1>Levi's Favorite Albums</h1>
     </header>
 
-    <button class="nav-toggle" aria-label="open navigation">☰</button>
+   <!-- Mobile Menu Toggle -->
+<button class="nav-toggle" id="navToggle" aria-label="open navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
-   <nav class="nav-closed">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="02products.html">Products</a></li>
-            <li><a href="03about.html">About</a></li>
-            <!-- <li><a href="04contact.html">Contact</a></li>
-            <li><a href="05UwUsongs.html">Songs With UwU</a></li> -->
-            <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
-            <li><a href="07albums.html">Levi's Favorite Albums</a></li>
-            <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
-         <!--   <li><a href="09dontgohere.html">Don't Go Here</a></li>
-            <li><a href="10poetry.html">Poetry</a></li> -->
-            <li><a href="11photography.html">Photography</a></li>
-             <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-39916-46">Guestbook</a></li>
-        </ul>
-    </nav>
+<nav class="nav-closed">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="02products.html">Products</a></li>
+        <li><a href="03about.html">About</a></li>
+        <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
+        <li><a href="07albums.html">Levi's Favorite Albums</a></li>
+        <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
+        <li><a href="11photography.html">Photography</a></li>
+        <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-39916-46">Guestbook</a></li>
+    </ul>
+
+    <div id="navOverlay"></div>
+</nav>
+
 
     <main class="content fade-in">
         <p class="medium-paragraph">
@@ -133,6 +136,6 @@
         <p>&copy; 2025 Wasdwarlords.com</p>
     </footer>
 
-
+ <script src="script1.js"></script>
 </body>
 </html>
