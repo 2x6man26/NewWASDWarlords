@@ -269,10 +269,16 @@ nav ul {
     display: block;
 }
 
+.carousel-item {
+    height: 50%;
+    width: auto;
+}
+
 .carousel-track {
     display: flex;
     gap: 1rem;
     transition: transform 0.5s ease-in-out;
+    height: 50%;
 }
 
 /* Mobile: stack carousel items vertically */
@@ -370,6 +376,25 @@ nav ul {
     .score { font-size: 1.2rem; }
 }
 
+.game-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.ball {
+    position: absolute;
+}
+.ball {
+    width: 60px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+
 /* ===================== LIGHTBOX ===================== */
 #lightbox img {
     max-width: 95%;
@@ -388,4 +413,15 @@ footer {
 
 @media(max-width:550px){
     header h1 { font-size: 1.7rem; }
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-track {
+    display: flex;
+    gap: 1rem;
 }
