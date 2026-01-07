@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Casino</title>
+  <style>
+    body { font-family: sans-serif; background:#111; color:#fff; text-align:center; }
+    .machine { border:2px solid #444; padding:20px; margin:20px auto; width:340px; border-radius:10px; }
+    button { padding:8px 16px; margin:6px; cursor:pointer; }
+    .reel { font-size:2rem; letter-spacing:10px; }
+    .cards { font-size:1.2rem; }
+  </style>
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
+
+<h1>Mini Casino</h1>
+
+
+   <!-- Mobile Menu Toggle -->
+<button class="nav-toggle" id="navToggle" aria-label="open navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<nav class="nav-closed">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="02products.html">Products</a></li>
+        <li><a href="03about.html">About</a></li>
+        <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
+        <li><a href="07albums.html">Levi's Favorite Albums</a></li>
+        <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
+        <li><a href="11photography.html">Photography</a></li>
+        <li><a href="12casino.html">Casino</a></li>
+        <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-39916-46">Guestbook</a></li>
+    </ul>
+
+    <div id="navOverlay"></div>
+</nav>
+
+<p>Balance: $<span id="balance">100</span></p>
+
+<div class="machine">
+  <h2>Slot Machine</h2>
+  <div class="reel" id="slots">🍒 🍋 🔔</div>
+  <button onclick="playSlots()">Spin ($5)</button>
+</div>
+
+<div class="machine">
+  <h2>Coin Flip</h2>
+  <button onclick="playCoin('heads')">Heads ($10)</button>
+  <button onclick="playCoin('tails')">Tails ($10)</button>
+  <p id="coinResult"></p>
+</div>
+
+<div class="machine">
+  <h2>Dice Roll</h2>
+  <button onclick="playDice()">Roll ($10) — Win on 5 or 6</button>
+  <p id="diceResult"></p>
+</div>
+
+<div class="machine">
+  <h2>Blackjack</h2>
+  <p class="cards" id="bjPlayer">Player: </p>
+  <p class="cards" id="bjDealer">Dealer: </p>
+  <button onclick="bjDeal()">Deal ($10)</button>
+  <button onclick="bjHit()">Hit</button>
+  <button onclick="bjStand()">Stand</button>
+  <p id="bjResult"></p>
+</div>
+
+<div class="machine">
+  <h2>Poker (5-Card Draw)</h2>
+  <p class="cards" id="pokerHand">Hand: </p>
+  <button onclick="pokerDeal()">Deal ($10)</button>
+  <button onclick="pokerDraw()">Draw (auto-hold best)</button>
+  <p id="pokerResult"></p>
+</div>
+
+<script src="casino.js"></script>
+</body>
+</html>

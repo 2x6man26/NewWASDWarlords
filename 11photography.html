@@ -1,87 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WASD Warlords | Photography</title>
-    <link rel="stylesheet" href="test.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WASD Warlords | Photography</title>
+  <link rel="stylesheet" href="test.css">
+
+  <style>
+    .carousel-container {
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+
+    .carousel-item {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-item img {
+      max-width: 500px; /* bigger but still controlled */
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .left-btn { left: 10px; }
+    .right-btn { right: 10px; }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Photography by Levi</h1>
-    </header>
+<header>
+  <h1>Photography by Levi</h1>
+</header>
 
-  <!-- Mobile Menu Toggle -->
 <button class="nav-toggle" id="navToggle" aria-label="open navigation">
-    <span></span>
-    <span></span>
-    <span></span>
+  <span></span><span></span><span></span>
 </button>
 
-<nav class="nav-closed">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="02products.html">Products</a></li>
-        <li><a href="03about.html">About</a></li>
-        <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
-        <li><a href="07albums.html">Levi's Favorite Albums</a></li>
-        <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
-        <li><a href="11photography.html">Photography</a></li>
-        <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-39916-46">Guestbook</a></li>
-    </ul>
-
-    <div id="navOverlay"></div>
+<nav id="mainNav" class="nav-closed">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="02products.html">Products</a></li>
+    <li><a href="03about.html">About</a></li>
+    <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
+    <li><a href="07albums.html">Levi's Favorite Albums</a></li>
+    <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
+    <li><a href="11photography.html">Photography</a></li>
+    <li><a href="12casino.html">Casino</a></li>
+    <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-39916-46">Guestbook</a></li>
+  </ul>
+  <div id="navOverlay"></div>
 </nav>
 
-    <main class="content fade-in">
-        <p class="medium-paragraph">
-            Welcome to my photography collection! I am in love with the magic of film photograpghy.
-            There's something about it that no digital camera or mere filter will ever be able to replicate.
-            There's something romantic about the exact light that was present when the photo was taken is now present in the physical film itself.
-            Please get in contact if you'd like to book my services.
-            Use the arrows to browse, and click any photo to enlarge it.
-        </p>
+<main class="content fade-in">
+  <p class="medium-paragraph">
+    Use the arrows to browse the full collection.
+  </p>
 
-        <div class="carousel-container">
-            <button class="carousel-btn left-btn">&#10094;</button>
-            <div class="carousel-track">
-                <!-- <div class="carousel-item">
-                    <img src="Assets/Photography/photo1.jpg" alt="Photo 1" onclick="openLightbox(this)">
-                
-                </div>
-                <div class="carousel-item">
-                    <img src="Assets/Photography/photo2.jpg" alt="Photo 2" onclick="openLightbox(this)">
-         
-                </div>
-                <div class="carousel-item">
-                    <img src="Assets/Photography/photo3.jpg" alt="Photo 3" onclick="openLightbox(this)">
-                    
-                </div>
-                <div class="carousel-item">
-                    <img src="Assets/Photography/photo4.jpg" alt="Photo 4" onclick="openLightbox(this)">
-                
-                </div>
-                <div class="carousel-item">
-                    <img src="Assets/Photography/photo5.jpg" alt="Photo 5" onclick="openLightbox(this)">
-            
-                </div> -->
-                <!-- Add more photos here -->
-            </div>
-            <button class="carousel-btn right-btn">&#10095;</button>
-        </div>
+  <div class="carousel-container">
+    <button class="carousel-btn left-btn" id="prevBtn">&#10094;</button>
 
-        <!-- Lightbox overlay -->
-        <div id="lightbox" onclick="closeLightbox()">
-            <img id="lightbox-img" src="" alt="Enlarged photo">
-        </div>
+    <div class="carousel-track" id="carouselTrack">
+      <!-- Repeat pattern up to 30 photos -->
+      <!-- Example -->
+      <div class="carousel-item"><img src="Assets/Photography/photo1.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo2.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo3.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo4.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo5.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo6.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo7.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo8.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo9.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo10.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo11.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo12.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo13.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo14.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo15.jpg"></div>
+      <div class="carousel-item"><img src="Assets/Photography/photo16.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo17.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo18.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo19.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo20.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo21.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo22.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo23.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo24.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo25.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo26.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo27.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo28.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo29.jpg"></div>
+    <div class="carousel-item"><img src="Assets/Photography/photo30.jpg"></div>
 
-    </main>
+      <!-- ... continue through photo30.jpg -->
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Wasdwarlords.com</p>
-    </footer>
+    <button class="carousel-btn right-btn" id="nextBtn">&#10095;</button>
+  </div>
+</main>
 
-    <script src="script1.js"></script>
+<footer>
+  <p>&copy; 2025 Wasdwarlords.com</p>
+</footer>
+
+<script>
+/* MOBILE NAV */
+const navToggle = document.getElementById("navToggle");
+const nav = document.getElementById("mainNav");
+const overlay = document.getElementById("navOverlay");
+
+navToggle.addEventListener("click", () => {
+  nav.classList.toggle("nav-open");
+  nav.classList.toggle("nav-closed");
+});
+
+overlay.addEventListener("click", () => {
+  nav.classList.remove("nav-open");
+  nav.classList.add("nav-closed");
+});
+
+/* CAROUSEL (FIXED BACK BUTTON + ANY NUMBER OF IMAGES) */
+const track = document.getElementById("carouselTrack");
+const items = Array.from(track.children);
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+let index = 0;
+
+function updateCarousel() {
+  const width = track.parentElement.offsetWidth;
+  track.style.transform = `translateX(-${index * width}px)`;
+}
+
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % items.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + items.length) % items.length;
+  updateCarousel();
+});
+
+window.addEventListener("resize", updateCarousel);
+updateCarousel();
+</script>
+
 </body>
 </html>
