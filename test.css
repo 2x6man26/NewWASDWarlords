@@ -488,3 +488,70 @@ footer {
 .product-item img:hover {
   transform: scale(1.02); /* subtle zoom on hover */
 }
+
+/* popup.css */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.popup-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: pop 0.4s ease;
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup-box h2 {
+  margin-bottom: 0.5rem;
+}
+
+.popup-box p {
+  margin-bottom: 1.5rem;
+}
+
+.popup-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  background: #9fd4ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.popup-btn:hover {
+  opacity: 0.85;
+}
+
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
