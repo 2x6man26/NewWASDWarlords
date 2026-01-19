@@ -658,6 +658,7 @@ footer {
 }
 
 /* ===================== RINK ADS WITH GRADIENTS ===================== */
+/* Rink ad gradients & fallback for Safari */
 .rink-ad {
   color: #fff;
   border-radius: 16px;
@@ -670,6 +671,9 @@ footer {
   padding: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+
+  /* fallback gradient for Safari */
+  background: linear
 }
 
 .rink-ad.side {
