@@ -555,3 +555,147 @@ footer {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+/* ===================== ICE SKATING SIMULATOR ===================== */
+.ice-sim-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+#iceRink {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    background: radial-gradient(circle at top, #eaf7ff, #b9e3ff);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+@media (max-width: 700px) {
+    #iceRink {
+        height: 360px;
+    }
+}
+/* ===================== CHARACTER SELECTOR ===================== */
+.character-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.character-selector button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #eaeaea;
+  transition: 0.2s;
+}
+
+.character-selector button.active {
+  background: #111;
+  color: #fff;
+}
+
+.character-selector button:hover {
+  transform: scale(1.05);
+}
+/* ===================== RINK ADS ===================== */
+.ice-sim-layout {
+  display: grid;
+  grid-template-columns: 120px auto 120px;
+  gap: 1rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.rink-ad {
+  height: 90%;
+  background: #111;
+  color: #fff;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.1em;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 900px) {
+  .ice-sim-layout {
+    grid-template-columns: auto;
+  }
+  .rink-ad {
+    display: none;
+  }
+}
+/* ===================== ICE RINK GRADIENT ===================== */
+#iceRink {
+  background:
+    radial-gradient(circle at top, #f5fcff, #cfefff 55%, #b2dcff);
+}
+
+/* ===================== RINK AD LAYOUT ===================== */
+.ice-sim-layout {
+  display: grid;
+  grid-template-columns: 120px auto 120px;
+  grid-template-rows: 80px auto 80px;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  align-items: center;
+}
+
+.ice-sim-wrapper {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* ===================== RINK ADS WITH GRADIENTS ===================== */
+.rink-ad {
+  color: #fff;
+  border-radius: 16px;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.rink-ad.side {
+  writing-mode: vertical-rl;
+}
+
+.rink-ad.top,
+.rink-ad.bottom {
+  writing-mode: horizontal-tb;
+}
+
+/* Grid placement */
+.ad-left   { grid-column: 1; grid-row: 2; }
+.ad-right  { grid-column: 3; grid-row: 2; }
+.ad-top    { grid-column: 2; grid-row: 1; }
+.ad-bottom { grid-column: 2; grid-row: 3; }
+
+/* Mobile cleanup */
+@media (max-width: 900px) {
+  .ice-sim-layout {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+  .ad-left,
+  .ad-right {
+    display: none;
+  }
+}
+

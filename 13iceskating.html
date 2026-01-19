@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Ice Skating Simulator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="test.css" />
+</head>
+<body>
+<header>
+<h1 class="header">Ice Skating Simulator</h1>
+</header>
+<nav class="nav-closed">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="02products.html">Products</a></li>
+        <li><a href="03about.html">About</a></li>
+        <li><a href="06mixcd.html">Levi's Mix CDs</a></li>
+        <li><a href="07albums.html">Levi's Favorite Albums</a></li>
+        <li><a href="08game.html">Fun Game With Cutting-Edge Graphics</a></li>
+        <li><a href="11photography.html">Photography</a></li>
+        <li><a href="12casino.html">Casino</a></li>
+        <li><a href="13iceskating.html">Ice Skating Simulator</a></li>
+        <li><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-39916-46">Guestbook</a></li>
+    </ul>
+
+    <div id="navOverlay"></div>
+</nav>
+<div class="character-selector">
+  <button data-color="#1a6cff" class="active">Elyssa</button>
+  <button data-color="#ff6bd6">Natalie</button>
+  <button data-color="#6bff95">Emma</button>
+  <button data-color="#ffd36b">Sophia</button>
+</div>
+
+
+<div class="ice-sim-layout">
+  <div class="rink-ad side ad-left"></div>
+  <div class="rink-ad side ad-right"></div>
+  <div class="rink-ad top ad-top"></div>
+
+  <div class="ice-sim-wrapper">
+    <canvas id="iceRink" width="900" height="500"></canvas>
+  </div>
+
+  <div class="rink-ad bottom ad-bottom"></div>
+</div>
+
+<script src="ice-skating.js"></script>
+
+
+
+</body>
+</html>
+ 
