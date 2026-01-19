@@ -673,12 +673,17 @@ footer {
   letter-spacing: 0.12em;
 
   /* fallback gradient for Safari */
-  background: linear
+  background: linear-gradient(135deg, #111, #333);
 }
 
+
 .rink-ad.side {
+  -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
+  -webkit-text-orientation: mixed;
+  text-orientation: mixed;
 }
+
 
 .rink-ad.top,
 .rink-ad.bottom {
